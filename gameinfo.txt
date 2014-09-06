@@ -2,17 +2,31 @@
 {
 	game 		"Mortillery"
 	title 		"Mortillery"
-	type		singleplayer_only
+	type		multiplayer_only
 
 	FileSystem
 	{
-		SteamAppId					243730				// Source SDK Base 2013 Singleplayer
+		SteamAppId					440 // TF2
 		SearchPaths
 		{
 			// No /custom/ folders because they can interfere with mod content and shouldn't be in mod gameinfo.
 			game+mod+mod_write+default_write_path	|gameinfo_path|.		// Mod
 			gamebin					|gameinfo_path|bin		// Mod's Binaries	
-	 
+	 		
+			// Using SSDKBase13 path, then back to /common/ and then using Portal folder. 
+			// |all_source_engine_paths| magic help here too.
+			game				|all_source_engine_paths|../Portal/portal/portal_sound_vo_english.vpk 
+			game				|all_source_engine_paths|../Portal/portal/portal_pak.vpk 
+
+			game				"|all_source_engine_paths|../Counter-Strike Source/cstrike/cstrike_pak.vpk"					//Counter Strike
+			game				"|all_source_engine_paths|../Day of Defeat Source/dod/dod_pak.vpk"							//Day of Defeat
+			game				"|all_source_engine_paths|../GarrysMod/garrysmod/garrysmod.vpk"								//Garrysmod
+			
+			game				"|all_source_engine_paths|../Team Fortress 2/tf/tf2_misc.vpk"								//TF2 begin
+			game				"|all_source_engine_paths|../Team Fortress 2/tf/tf2_sound_misc.vpk"
+			game				"|all_source_engine_paths|../Team Fortress 2/tf/tf2_sound_vo_english.vpk"
+			game				"|all_source_engine_paths|../Team Fortress 2/tf/tf2_textures.vpk"							//TF2 End
+
 			// Base Half-Life 2 Content: ep2, episodic, hl2
 			game_lv					|all_source_engine_paths|hl2/hl2_lv.vpk
 			game					|all_source_engine_paths|ep2/ep2_english.vpk
