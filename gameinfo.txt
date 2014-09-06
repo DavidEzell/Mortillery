@@ -15,6 +15,10 @@
 	 
 			// Base Half-Life 2 Content: ep2, episodic, hl2
 			game_lv					|all_source_engine_paths|hl2/hl2_lv.vpk
+			game					|all_source_engine_paths|ep2/ep2_english.vpk
+			game					|all_source_engine_paths|ep2/ep2_pak.vpk
+			game					|all_source_engine_paths|episodic/ep1_english.vpk
+			game					|all_source_engine_paths|episodic/ep1_pak.vpk
 			game					|all_source_engine_paths|hl2/hl2_english.vpk
 			game					|all_source_engine_paths|hl2/hl2_pak.vpk
 			game					|all_source_engine_paths|hl2/hl2_textures.vpk
